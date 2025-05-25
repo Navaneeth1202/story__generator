@@ -18,7 +18,7 @@ This project showcases how **Generative AI** can enhance creative writing, provi
 
 ---
 
-## 🚀 Features
+## 🚀 Features  
 
 - Genre-based storytelling
 - Custom user prompts and character setup
@@ -38,3 +38,55 @@ Install all dependencies using:
 
 ```bash
 pip install -r requirements.txt
+____________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+🔧 Setup
+1.Clone this repository:
+    git clone https://github.com/your-username/story-generator.git
+    cd story-generator
+
+2.Create a virtual environment (optional but recommended):
+    python -m venv venv
+    source venv/bin/activate   # On Windows: venv\Scripts\activate
+
+3.Install dependencies:
+    pip install -r requirements.txt
+
+4.Run the script:
+    python main.py
+____________________________________________________________________________________________________________________________________________________________________
+🔑 API Key
+      [Get your Cohere API key from](https://dashboard.cohere.com/api-keys) for more information
+____________________________________________________________________________________________________________________________________________________________________
+📁 Project Structure
+
+         story-generator/
+         │
+         ├── main.py # Main entry file for user interaction
+         ├── story_module.py # Contains the story generation logic
+         ├── requirements.txt # Python dependencies
+         └── README.md # Project documentation
+___________________________________________________________________________________________________________________________________________________________________
+▶️ Run the Application
+    python main.py
+
+   #You will be prompted to enter:
+   1.Genre (e.g., Sci-Fi, Horror, Rom-Com)
+   2.Characters (comma-separated)
+   3.Story setting or prompt
+
+   #Then choose:
+   1.Continue story
+   2.Show conclusion
+___________________________________________________________________________________________________________________________________________________________________
+🧪 Example Input
+    Genre: Horror
+    Characters: Mia, Detective Ray, Old Man Keller
+    Setting: A foggy abandoned lighthouse off the coast
+    ➡️ Generates a spooky horror story ending with a suspenseful twist. You can then choose to continue or conclude the story.
+____________________________________________________________________________________________________________________________________________________________________
+💻 Example Requirements (requirements.txt)
+    cohere
+    python-dotenv
+____________________________________________________________________________________________________________________________________________________________________________________________________________________
+  
