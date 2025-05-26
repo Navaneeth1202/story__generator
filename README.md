@@ -42,7 +42,7 @@ ________________________________________________________________________________
 
 🔧 Setup
 1.Clone this repository:
-    git clone https://github.com/your-username/story-generator.git
+    git clone https://github.com/Navaneeth1202/story__generator.git
     cd story-generator
 
 2.Create a virtual environment (optional but recommended):
