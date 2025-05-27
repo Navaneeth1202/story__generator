@@ -1,92 +1,75 @@
 # 🧠 AI Story Generator
 
-A command-line Python application that uses **Cohere's Large Language Model (LLM)** to generate fun, engaging, and dynamic stories based on user input.
+A customizable, AI-powered story generator that creates dynamic and genre-based stories with user-defined characters, settings, and tone. Built using Python and integrated with Cohere's large language models for high-quality text generation.
 
-## ✨ Project Description
+## 🚀 Features
 
-**AI Story Generator** is an interactive storytelling tool powered by **Cohere's AI model**. It allows users to create original stories from scratch by specifying:
+- 🔥 Genre selection (Fantasy, Horror, Sci-Fi, Romance, Mystery, etc.)
+- 👤 Custom number of characters with user-defined names
+- 🪄 Dynamic, unique storylines for each run
+- 🎭 Emotionally engaging and suspenseful endings
+- 📜 Story structure: Introduction → Conflict → Climax → Conclusion
+- 🌐 Easy to deploy with Streamlit
+- 🔐 Secure API key management via Streamlit Secrets
 
-- ✅ Genre (Sci-Fi, Fantasy, Horror, Rom-Com)
-- ✅ Main Characters
-- ✅ Custom Setting / Prompt
+## 🛠️ Tech Stack
 
-Once the story is generated, users can choose to:
-- 🔁 **Continue** the story with new twists
-- ✅ **Conclude** the story in a suspenseful or satisfying way
+- **Python 3.10+**
+- **Cohere API** – for story generation using large language models
+- **Streamlit** – for interactive UI (deployment-ready)
+- **dotenv / secrets** – for safe API key storage
+- **VS Code / GitHub** – for version control and development
 
-This project showcases how **Generative AI** can enhance creative writing, providing a great learning experience for developers working with LLMs.
+## 📦 Installation
 
----
+1. **Clone this repository:**
+   ```bash
+   git clone https://github.com/Navaneeth1202/story__generator.git
+   cd story__generator
+2.**Install dependencies:**
+   pip install -r requirements.txt
 
-## 🚀 Features  
+3.Set up API key:
+Create a file named .streamlit/secrets.toml and add your Cohere API key:
 
-- Genre-based storytelling
-- Custom user prompts and character setup
-- AI-generated story continuation and conclusion
-- Curiosity-driven or suspenseful endings
-- CLI interaction using Python
+    [cohere]
+    api_key = "your-cohere-api-key"
+_______________________________________________________________________________________________________________________________________________________________    
+## 🧪 **Usage**
 
----
+You can run the generator either through the command line or with Streamlit UI:
 
-## 🧩 Requirements
+🔹 CLI version (basic):
 
-- Python 3.7+
-- [`cohere`](https://pypi.org/project/cohere/)
-- [`python-dotenv`](https://pypi.org/project/python-dotenv/)
+    python story_generator.py
+🔹 Streamlit version (recommended):
 
-Install all dependencies using:
+    streamlit run streamlit_app.py
+_______________________________________________________________________________________________________________________________________________________________
+## **Sample Output**
 
-```bash
-pip install -r requirements.txt
-____________________________________________________________________________________________________________________________________________________________________________________________________________________
+Genre: Mystery  
+Characters: Detective Leo, Dr. Mason  
+Story:  
+Late one rainy evening, Detective Leo arrived at the abandoned lighthouse. Dr. Mason had disappeared, and strange messages kept appearing in blood-red ink...
+...But as the sun rose, Leo discovered the final note—hidden in plain sight—and it changed everything.
+_______________________________________________________________________________________________________________________________________________________________
 
-🔧 Setup
-1.Clone this repository:
-    git clone https://github.com/Navaneeth1202/story__generator.git
-    cd story-generator
+## 📁 **Project Structure**
 
-2.Create a virtual environment (optional but recommended):
-    python -m venv venv
-    source venv/bin/activate   # On Windows: venv\Scripts\activate
+             story__generator/
+             ├── app.py         # Streamlit web app interface
+             ├── main.py # Main entry file for user interaction
+             ├── story_module.py # Contains the story generation logic
+             ├── requirements.txt # Python dependencies
+             └── README.md # Project documentation
+______________________________________________________________________________________________________________________________________________________________
+## 📌 **Future Enhancements**
 
-3.Install dependencies:
-    pip install -r requirements.txt
+🎨 Image generation for illustrated stories
 
-4.Run the script:
-    python main.py
-____________________________________________________________________________________________________________________________________________________________________
-🔑 API Key
-      👉[Get your Cohere API key here](https://dashboard.cohere.com/api-keys)
-____________________________________________________________________________________________________________________________________________________________________
-📁 Project Structure
+🧠 Character personality input for deeper narratives
 
-         story-generator/
-         │
-         ├── main.py # Main entry file for user interaction
-         ├── story_module.py # Contains the story generation logic
-         ├── requirements.txt # Python dependencies
-         └── README.md # Project documentation
-___________________________________________________________________________________________________________________________________________________________________
-▶️ Run the Application
-    python main.py
+💾 Export story to PDF/Word
 
-   #You will be prompted to enter:
-   1.Genre (e.g., Sci-Fi, Horror, Rom-Com)
-   2.Characters (comma-separated)
-   3.Story setting or prompt
-
-   #Then choose:
-   1.Continue story
-   2.Show conclusion
-___________________________________________________________________________________________________________________________________________________________________
-🧪 Example Input
-    Genre: Horror
-    Characters: Mia, Detective Ray, Old Man Keller
-    Setting: A foggy abandoned lighthouse off the coast
-    ➡️ Generates a spooky horror story ending with a suspenseful twist. You can then choose to continue or conclude the story.
-____________________________________________________________________________________________________________________________________________________________________
-💻 Example Requirements (requirements.txt)
-    cohere
-    python-dotenv
-____________________________________________________________________________________________________________________________________________________________________________________________________________________
-  
+📊 Dashboard to analyze reader engagement or tone
