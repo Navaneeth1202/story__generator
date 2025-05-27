@@ -57,13 +57,14 @@ ________________________________________________________________________________
 
 ## 📁 **Project Structure**
 
-             story__generator/
-             ├── app.py         # Streamlit web app interface
-             ├── main.py # Main entry file for user interaction
-             ├── story_module.py # Contains the story generation logic
-             ├── requirements.txt # Python dependencies
-             └── README.md # Project documentation
-______________________________________________________________________________________________________________________________________________________________
+            story__generator/
+            ├── app.py               # Streamlit web app interface
+            ├── main.py              # Main entry file for user interaction
+            ├── story_module.py      # Contains the story generation logic   
+            ├── requirements.txt     # Python dependencies
+            ├── README.md            # Project documentation
+            ├── .gitignore           # Specifies files/folders Git should ignore
+___________________________________________________________________________________________________
 ## 📌 **Future Enhancements**
 
 🎨 Image generation for illustrated stories
