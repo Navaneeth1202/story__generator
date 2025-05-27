@@ -1,41 +1,22 @@
 from story_module import StoryGenerator
 
-def main():
-    api_key = input("Enter your Cohere API key: ")
-    genre = input("Enter the genre (e.g., horror, sci-fi, rom-com): ")
-    setting = input("Enter the setting for the story: ")
-    characters = input("Enter the characters (comma-separated): ").split(',')
-
+def generate_story(api_key, genre, setting, characters):
     sg = StoryGenerator(api_key)
+    return sg.generate_story(genre, characters, setting)
 
-    # Generate the initial story
-    story = sg.generate_story(genre, characters, setting)
-    print("\n--- Story Start ---\n")
-    print(story)
-    print(" ")
+def generate_story_continuation(api_key, genre, setting, characters, previous_story):
+    sg = StoryGenerator(api_key)
+    return sg.generate_story_continuation(genre, characters, setting, previous_story)
 
-    while True:
-        print("\nWhat would you like to do next?")
-        print("1. Continue the story")
-        print("2. Conclude the story")
-        print("3. Exit")
-        choice = input("Enter your choice (1/2/3): ").strip()
-
-        if choice == "1":
-            story = sg.continue_story(story)
-            print("\n--- Continued Story ---\n")
-            print(story)
-        elif choice == "2":
-            conclusion = sg.conclude_story(story)
-            print("\n--- Conclusion ---\n")
-            print(conclusion)
-            print("Thank you for using the story generator. Goodbye!")
-            break
-        elif choice == "3":
-            print("Thank you for using the story generator. Goodbye!")
-            break
-        else:
-            print("Invalid input. Please enter 1, 2, or 3.")
-
-if __name__ == "__main__":
-    main()
+def generate_conclusion(api_key, genre, setting, characters, current_story):
+    sg = StoryGenerator(api_key)
+    prompt = (
+        f"Genre: {genre}\n"
+        f"Setting: {setting}\n"
+        f"Characters: {', '.join(characters)}\n"
+        f"Story so far:\n{current_story}\n"
+        "Write a satisfying conclusion to this story:"
+    )
+    response = sg.client.generate(prompt=prompt, max_tokens=200)
+    conclusion = response.generations[0].text.strip()
+    return current_story + "\n\n" + conclusion
